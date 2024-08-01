@@ -3,11 +3,15 @@ import PropTypes from 'prop-types';
 import css from './ContactList.module.css'
 
 
-const ContactList = ({users, onDelete}) => {
-    return <ul className={css.list}>
-        <Contact users={users} onDelete={onDelete}/>
+const ContactList = ({ users, onDelete }) => {
+  return (
+    <ul className={css.list}>
+      {users.map(user => (
+        <Contact key={user.id} user={user} onDelete={onDelete} />
+      ))}
     </ul>
-}
+  );
+};
 
 export default ContactList;
 

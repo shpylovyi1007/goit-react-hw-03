@@ -4,10 +4,11 @@ import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlinePhone } from "react-icons/ai";
 
 
-const Contact = ({users, onDelete}) => {
-    return <> {users.map(user => (
-        <li className={css.item} key={user.id}>
-            <div className={css.containerContacts}>
+const Contact = ({user, onDelete}) => {
+    return <> 
+
+<li className={css.item}>
+<div className={css.containerContacts}>
                 <div className={css.container}>
                     <AiOutlineUser />
                     <p>
@@ -19,15 +20,15 @@ const Contact = ({users, onDelete}) => {
                 </div>
             </div>
             <button className={css.button} onClick={() => onDelete(user.id)}>Delete</button>
-        </li>
-    ))}
+        
+</li>
     </>
 }
 
 export default Contact;
 
 Contact.propTypes = {
-    users: PropTypes.arrayOf(
+    user: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
