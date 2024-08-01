@@ -1,0 +1,23 @@
+.item {
+    border: 2px solid #fff;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    width: calc((100% - 30px) / 4);
+    min-width: 350px;
+}
+
+.button {
+    height: 40px;
+    margin: auto 0;
+    margin-left: auto;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
